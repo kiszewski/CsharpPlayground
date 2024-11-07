@@ -1,3 +1,4 @@
+namespace MinHeapNameSpace;
 using System.Collections;
 
 public class MinHeap
@@ -6,7 +7,7 @@ public class MinHeap
 
     private int length = 0;
 
-    public int Lenght => length;
+    public int Length => length;
 
     public void Insert(int value)
     {
