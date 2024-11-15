@@ -1,6 +1,6 @@
 public class CompareBTree
 {
-    public bool AreEquals<T>(BinaryNode<T>? treeA, BinaryNode<T>? treeB)
+    public bool AreEquals(BinaryNode<int>? treeA, BinaryNode<int>? treeB)
     {
         if (treeA == null && treeB == null) return true;
         if (treeA == null || treeB == null) return false;
@@ -49,18 +49,4 @@ public class CompareBTree
                 new BinaryNode<int>(29, null, new BinaryNode<int>(21)),
                 new BinaryNode<int>(42, null, new BinaryNode<int>(49))))
     );
-}
-
-public class BinaryNode<T>
-{
-    public T Value { get; set; }
-    public BinaryNode<T>? Left { get; set; }
-    public BinaryNode<T>? Right { get; set; }
-
-    public BinaryNode(T value, BinaryNode<T>? left = null, BinaryNode<T>? right = null)
-    {
-        Value = value;
-        Left = left;
-        Right = right;
-    }
 }
