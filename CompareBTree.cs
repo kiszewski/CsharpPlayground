@@ -5,7 +5,7 @@ public class CompareBTree
         if (treeA == null && treeB == null) return true;
         if (treeA == null || treeB == null) return false;
 
-        var areEquals = treeA.Value.Equals(treeB.Value);
+        var areEquals = treeA.Value!.Equals(treeB.Value);
 
         if (areEquals)
         {
@@ -57,7 +57,7 @@ public class BinaryNode<T>
     public BinaryNode<T>? Left { get; set; }
     public BinaryNode<T>? Right { get; set; }
 
-    public BinaryNode(T value, BinaryNode<T> left = null, BinaryNode<T> right = null)
+    public BinaryNode(T value, BinaryNode<T>? left = null, BinaryNode<T>? right = null)
     {
         Value = value;
         Left = left;
